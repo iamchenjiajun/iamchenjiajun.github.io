@@ -6,6 +6,7 @@
     bottom: 2rem;
     width: fit-content;
     margin: 0;
+    z-index: 10;
 }
 
 .nav__contents {
