@@ -1,6 +1,6 @@
 import React from 'react'
 import './nav.css'
-import { MdContacts, MdHome, MdPerson, MdWork } from 'react-icons/md'
+import { MdContacts, MdHome, MdPerson, MdWork, MdContentPaste } from 'react-icons/md'
 
 function Nav() {
   return (
@@ -8,6 +8,7 @@ function Nav() {
         <ul className='nav__contents'>
           <li><a href="/#" className='nav__item'><MdHome /></a></li>
           <li><a href="/#about" className='nav__item'><MdPerson /></a></li>
+          <li><a href="/#skills" className='nav__item'><MdContentPaste /></a></li>
           <li><a href="/#projects" className='nav__item'><MdWork /></a></li>
           <li><a href="/#contact" className='nav__item'><MdContacts /></a></li>
         </ul>

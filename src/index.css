@@ -46,8 +46,9 @@ a:hover {
 }
 
 em {
-  color: var(--light-color);
-  font-size: 0.9rem;
+  text-decoration: none;
+  font-style: normal;
+  color: var(--accent-color);
 }
 
 .outer__container {
@@ -55,20 +56,20 @@ em {
 }
 
 .container {
-  width: 40%;
+  width: 50%;
   margin: 0 auto 50px;
 }
 
 /* Tablet */
 @media only screen and (min-width: 513px) and (max-width: 1024px) {
   .container {
-    width: 75%;
+    width: 80%;
   }
 }
 
 /* Mobile */
 @media only screen and (max-width: 512px) {
   .container {
-    width: 85%;
+    width: 90%;
   }
 }
