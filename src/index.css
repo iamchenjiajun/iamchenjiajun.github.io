@@ -49,6 +49,12 @@ em {
   text-decoration: none;
   font-style: normal;
   color: var(--accent-color);
+  transition: var(--transition);
+  display:inline-block;
+}
+
+em:hover {
+  transform: scale(120%);
 }
 
 .outer__container {
@@ -65,11 +71,19 @@ em {
   .container {
     width: 80%;
   }
+
+  em:hover {
+    transform: none;
+  }
 }
 
 /* Mobile */
 @media only screen and (max-width: 512px) {
   .container {
     width: 90%;
+  }
+
+  em:hover {
+    transform: none;
   }
 }

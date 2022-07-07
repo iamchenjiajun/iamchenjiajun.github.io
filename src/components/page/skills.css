@@ -9,6 +9,11 @@
     border-radius: 1rem;
     overflow: hidden;
     border: 1px solid var(--accent-color);
+    transition: var(--transition);
+}
+
+.skills__section:hover {
+    transform: scale(110%);
 }
 
 .skills__section li {
