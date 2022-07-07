@@ -10,6 +10,7 @@
     overflow: hidden;
     border: 1px solid var(--accent-color);
     transition: var(--transition);
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.8));
 }
 
 .skills__section:hover {
