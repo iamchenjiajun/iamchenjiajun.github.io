@@ -5,7 +5,7 @@
 .footer__outer {
     background: var(--accent-color);
     padding: 10px;
-    clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 0%);
+    clip-path: polygon(0% 0%, 100% calc(5.5vw), 100% 100%, 0% 100%, 0% 0%);
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
