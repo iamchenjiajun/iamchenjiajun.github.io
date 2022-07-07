@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 function Header() {
   return (
-    <header className='container header__container'>
-      <div className="header__contents">
+    <header className='outer__container header__outer'>
+      <div className="container header__container">
         <img className='avatar' src="https://github.com/iamchenjiajun.png" alt="Me" />
         <div className="header__container__about">
           <div className="header__container__about__name">

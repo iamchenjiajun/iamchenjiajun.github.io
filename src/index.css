@@ -50,6 +50,10 @@ em {
   font-size: 0.9rem;
 }
 
+.outer__container {
+  width: 100%;
+}
+
 .container {
   width: 40%;
   margin: 0 auto 50px;
