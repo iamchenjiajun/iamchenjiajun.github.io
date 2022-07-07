@@ -1,0 +1,25 @@
+.footer__outer {
+    background: var(--accent-color);
+    padding: 10px;
+    clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 0%);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer__outer * {
+    color: var(--main-bg-color);
+}
+
+.footer__source-code {
+    margin: 0.8rem 0;
+    display: block;
+    width: fit-content;
+    color: var(--accent-color);
+    padding: 0.4rem 0.8rem;
+    background: var(--main-bg-color);
+    border-radius: 0.6rem;
+}
+
+.footer__source-code:hover {
+    background: var(--alt-bg-color);
+}
