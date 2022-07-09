@@ -1,0 +1,28 @@
+.contact__form * {
+    margin: 1rem 0;
+    background: var(--alt-bg-color);
+    color: var(--main-color);
+}
+
+.contact__form-input {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.contact__form-textarea {
+    resize: none;
+    display: block;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+}
+
+.contact__form-button {
+    font-size: 1rem;
+    background-color: var(--accent-color);
+    color: var(--main-bg-color);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
