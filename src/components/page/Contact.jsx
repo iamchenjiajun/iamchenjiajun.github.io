@@ -9,7 +9,7 @@ function Contact() {
           <input className='contact__form-input' required type="text" placeholder='your name' />
           <input className='contact__form-input' required type="email" name="" id="" placeholder='your email' />
           <textarea className='contact__form-textarea' required name="" id="" cols="30" rows="10" placeholder='your message'></textarea>
-          <button className='contact__form-button' type="submit">submit</button>
+          <button className='contact__form-button' type="submit" disabled>submit</button>
         </form>
     </section>
   )
