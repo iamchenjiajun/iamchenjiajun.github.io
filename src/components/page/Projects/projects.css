@@ -87,7 +87,8 @@
 .projects__article-content {
     height: 94vh;
     display: block;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background: var(--alt-bg-color);
     padding: 1rem;
     margin: 3vh auto;
