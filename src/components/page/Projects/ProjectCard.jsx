@@ -3,7 +3,7 @@ import { MdCode, MdPlayArrow } from 'react-icons/md'
 
 function ProjectCard(props) {
     return (
-        <div className='project__card-item'>
+        <div className='project__card-item' onClick={props.onclick}>
             <img className='project__card-img' src={props.img} alt="project" />
             <div className='project__card-text'>
                 <div className="project__card-header">
