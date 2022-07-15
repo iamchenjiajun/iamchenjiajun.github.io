@@ -13,6 +13,39 @@
     margin-bottom: 0;
 }
 
+.projects__container-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* project card filter */
+.project__filter {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-left: 1rem;
+}
+
+.project__filter-category {
+    list-style: none;
+    cursor: pointer;
+    display: block;
+    border: 1px solid var(--accent-color);
+    border-left: none;
+    padding: 0.3rem 0.6rem;
+    --border-radius: 0.6rem;
+}
+
+.project__filter-category:first-child {
+    border-left: 1px solid var(--accent-color);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.project__filter-category:last-child {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
 
 /* project cards */
 .projects__cards {
