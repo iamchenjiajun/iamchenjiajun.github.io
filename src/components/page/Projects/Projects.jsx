@@ -43,8 +43,8 @@ function Projects() {
           </section>
       </div>
     </div>
-    <div className='projects__article'>
-      <article className='projects__article-content'>
+    <div className='projects__article' onClick={closeModal}>
+      <article className='projects__article-content' onClick={(e) => e.stopPropagation()}>
         <span className='projects__article-close' onClick={closeModal}><MdClose /></span>
         {viewMarkup}
       </article>
