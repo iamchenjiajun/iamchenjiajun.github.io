@@ -18,6 +18,17 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--accent-color);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--alt-bg-color);
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0.25rem;
+  background-color: var(--accent-color);
 }
 
 body {
