@@ -127,6 +127,7 @@
     margin: 3vh auto;
     width: 80%;
     max-width: 800px;
+    animation: scroll-up 0.4s;
 }
 
 .projects__article-close {
@@ -137,8 +138,23 @@
     float: right;
 }
 
-.projects__article-content {
-    animation: scroll-up 0.4s;
+/* Article Markup Styling */
+.projects__article-content > h3 {
+    margin-top: 1rem;
+}
+
+.project__article-box {
+    border: 1px solid var(--accent-color);
+    padding: 0.8rem;
+    margin: 1rem 0;
+}
+
+.project__article-box > h3 {
+    color: var(--accent-color);
+}
+
+.projects__article-content p {
+    margin-top: 0.5rem;
 }
 
 
