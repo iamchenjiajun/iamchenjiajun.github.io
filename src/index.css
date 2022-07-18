@@ -14,6 +14,7 @@
   --light-color: #77767b;
   --accent-color: #ffc400;
   --transition: 250ms ease-in-out all;
+  --card-radius: 0.1rem;
 }
 
 html {

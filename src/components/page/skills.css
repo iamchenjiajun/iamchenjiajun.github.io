@@ -6,7 +6,7 @@
 .skills__section {
     margin: 1rem 10px;
     background: var(--alt-bg-color);
-    border-radius: 1rem;
+    border-radius: var(--card-radius);
     overflow: hidden;
     border: 1px solid var(--accent-color);
     transition: var(--transition);
