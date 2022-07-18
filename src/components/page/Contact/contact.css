@@ -1,0 +1,19 @@
+.contact__form-button {
+    display: block;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+.contact__form-info {
+    opacity: 68%;
+    font-size: 0.5rem;
+}
+
+.contact__googleform {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    background: #fff3cc;
+}
