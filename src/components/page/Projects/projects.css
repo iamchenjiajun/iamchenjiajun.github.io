@@ -157,6 +157,12 @@
     margin-top: 0.5rem;
 }
 
+.projects__article-content img {
+    display: block;
+    max-height: 500px;
+    max-width: 100%;
+}
+
 
 /* animations */
 @keyframes scroll-up {
