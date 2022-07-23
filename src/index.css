@@ -65,10 +65,6 @@ em {
   display:inline-block;
 }
 
-em:hover {
-  transform: scale(120%);
-}
-
 .outer__container {
   width: 100%;
 }

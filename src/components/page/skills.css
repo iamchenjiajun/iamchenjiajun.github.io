@@ -14,7 +14,7 @@
 }
 
 .skills__section:hover {
-    transform: scale(110%);
+    box-shadow: 0 0 2rem rgba(0,0,0, 0.8);
 }
 
 .skills__section li {
