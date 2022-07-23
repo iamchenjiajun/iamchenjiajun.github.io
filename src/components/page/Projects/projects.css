@@ -81,7 +81,6 @@
 }
 
 .project__card-item:hover {
-    transform: scale(108%);
     box-shadow: 0 0 2rem rgba(0,0,0, 0.8);
 }
 
