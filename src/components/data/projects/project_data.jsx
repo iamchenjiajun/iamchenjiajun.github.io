@@ -1,8 +1,12 @@
+import cg3207_img from '../../../assets/cg3207_proj.jpg'
+import terminus_img from '../../../assets/terminus.png'
+import stardust_conquerors_img from '../../../assets/stardust_conquerors.png'
+
 const project_data = [
 	{
-		title: "Neural Network Accelerator on FPGA",
+		title: "[EE4218] Neural Network Accelerator on FPGA",
 		description: "This project contains a neural network accelerator implemented on FPGA with Verilog (HDL) and C++ (HLS).",
-		img: 'https://github.com/iamchenjiajun.png',
+		img: cg3207_img,
 		category: "embedded",
 		markup:
 		<>
@@ -12,7 +16,7 @@ const project_data = [
 		</>,
 	},
 	{
-		title: "Minesweeper Duels",
+		title: "[Hack&Roll 2021] Minesweeper Duels",
 		description: "24h hackathon project, 2 player real-time multiplayer built with socket.io and expressJS. Minesweeper Duels is a 2 player game where each player takes turns to reveal a space in the Minesweeper board. However, each player only has a limited amount of time, where it ticks down during your turn. Clicking on a mine deducts additional time.",
 		img: 'https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/325/940/datas/gallery.jpg',
 		source: "https://github.com/iamchenjiajun/minesweeper-duels",
@@ -20,7 +24,7 @@ const project_data = [
 		category: "web",
 		markup:
 		<>
-			<h2>Minesweeper Duels</h2>
+			<h2>[Hack&Roll 2021] Minesweeper Duels</h2>
 			<p>category: <em>web development</em></p>
 
 			<section className="project__article-box">
@@ -64,6 +68,63 @@ const project_data = [
 			<h3>What we learned</h3>
 			<p>node.js was a new framework to some of our members, and we had to pick it up as we went.</p>
 			<p>How socketIO sends and waits for messages between client and server.</p>
+		</>,
+	},
+	{
+		title: "[CS2113] termiNus",
+		description: "termiNus is an interactive task manager for undergraduate students in NUS. It is ideal for keyboard-inclined students to showcase their skills and make their life easier with the help of termiNus.",
+		img: terminus_img,
+		source: "https://github.com/AY2021S1-CS2113-T14-3/tp",
+		demo: "https://ay2021s1-cs2113-t14-3.github.io/tp/",
+		category: "software",
+		markup:
+		<>
+			<h2>termiNus</h2>
+			<p>category: <em>software</em></p>
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<small>This is a terminal based program written in Java.</small>
+				<p>termiNus is an interactive task manager for undergraduate students in NUS. It is ideal for keyboard-inclined students to showcase their skills and make their life easier with the help of termiNus.</p>
+				<p>This project was part of the <em>CS2113 Software Engineering & Object-Oriented Programming</em> module.</p>
+				<p>In the module, we learnt OOP principles and how to apply them in a Software Engineering context. My team also had to write extensive user and developer documentation, explaining the technical parts using UML diagrams.</p>
+				<p>Due to the collaborative nature of the project, we also learnt how to use Version Control Systems like Git to facilitate the software development process, using workflows such as fork and pull requests.</p>
+			</section>
+			<img src={terminus_img} alt="" />
+			<small>Screenshot of the program.</small>
+			<p>The screenshot above shows the initial screen when the program is loaded, with one added task and an added module.</p>
+			<img src="https://ay2021s1-cs2113-t14-3.github.io/tp/images/ParserSequenceDiagram.png" alt="" />
+			<p>The above image shows a UML diagram I made, which explains part of the code for parsing user commands.</p>
+		</>,
+	},
+	{
+		title: "[Orbital] Stardust Conquerors",
+		description: "A browser game written in HTML5, CSS and JavaScript on the front-end and supported by the Django framework on the backend.",
+		img: stardust_conquerors_img,
+		demo: "https://stardustconquerors.herokuapp.com/",
+		category: "web",
+		markup:
+		<>
+			<h2>Stardust Conquerors</h2>
+			<p>category: <em>web</em></p>
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<p>A browser game written in HTML5, CSS and JavaScript on the front-end and supported by the Django framework on the backend.</p>
+			</section>
+		</>,
+	},
+	{
+		title: "[CG3207] FPGA Computer",
+		description: "A RISC computer implemented in Verilog on a Xilinx Artix 7 FPGA.",
+		img: cg3207_img,
+		category: "embedded",
+		markup:
+		<>
+			<h2>FPGA Computer</h2>
+			<p>category: <em>embedded</em></p>
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<p>A RISC computer implemented in Verilog on a Xilinx Artix 7 FPGA.</p>
+			</section>
 		</>,
 	},
 ]
