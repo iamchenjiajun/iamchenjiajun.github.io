@@ -13,33 +13,30 @@ const navItems = [
 ];
 
 function Nav() {
-  const [selection, setSelection] = useState("head");
+  const [scroll, setScroll] = useState(window.scrollY);
   const navbarContext = useContext(NavbarContext);
 
+  let minOffset = 0;
+  let minOffsetKey = navItems[0].target;
+  for (const [key, value] of Object.entries(navbarContext)) {
+    if (value.current && scroll >= value.current.offsetTop - 50 && value.current.offsetTop >= minOffset) {
+      minOffset = value.current.offsetTop;
+      minOffsetKey = key;
+    }
+  }
+
   useEffect(() => {
-    const scrollEvent = () => {
-      let minOffset = 0;
-      let minOffsetKey = null;
-      for (const [key, value] of Object.entries(navbarContext)) {
-        if (window.scrollY >= value.current.offsetTop - 50 && value.current.offsetTop >= minOffset) {
-          minOffset = value.current.offsetTop;
-          minOffsetKey = key;
-        }
-      }
-      setSelection(minOffsetKey);
-    };
-
+    const scrollEvent = () => setScroll(window.scrollY);
     window.addEventListener('scroll', scrollEvent);
-
     return () => window.removeEventListener('scroll', scrollEvent);
-  }, [navbarContext])
+  }, []);
   
   return (
     <nav className='container container__nav'>
         <ul className='nav__contents'>
           {navItems.map(
             (item, index) => 
-              <NavListItem domId={item.target} key={index} href={item.href} icon={item.icon} selection={selection} />
+              <NavListItem domId={item.target} key={index} href={item.href} icon={item.icon} selection={minOffsetKey} />
           )}
         </ul>
     </nav>
