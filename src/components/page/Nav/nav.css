@@ -26,13 +26,35 @@
     opacity: calc(100%);
 }
 
+.nav__contents li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav__item {
+    display: block;
     border-radius: 0.6rem;
     text-align: center;
     box-sizing: border-box;
     padding: 0.1rem 0.5rem;
     margin: auto;
     font-size: 1.6rem;
+}
+
+.nav__item::after {
+    content: "";
+    display: block;
+    background: transparent;
+    height: 0.2rem;
+    width: 0.2rem;
+    margin: auto;
+    transition: var(--transition);
+}
+
+.selected.nav__item::after {
+    width: 100%;
+    background: var(--accent-color);
 }
 
 .selected {
