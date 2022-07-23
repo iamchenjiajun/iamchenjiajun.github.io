@@ -4,6 +4,7 @@ import './projects.css'
 import project_data from '../../data/projects/project_data'
 import { MdClose } from 'react-icons/md'
 import { useNavbarRef } from '../../context/NavbarContext'
+import ProjectCategoryItem from './ProjectCategoryItem'
 
 function Projects() {
   const [viewMarkup, setViewMarkup] = useState(null);
@@ -42,10 +43,8 @@ function Projects() {
           <section className='projects__container-header'>
             <h2>my projects</h2>
             <ul className='project__filter'>
-              <li className='project__filter-category' onClick={() => setCategoryFilter(null)}>all</li>
-              {categoryList.map(item =>
-                <li key={item} className='project__filter-category' onClick={() => setCategoryFilter(item)}>{item}</li>
-              )}
+              <ProjectCategoryItem item={'all'} onclick={() => setCategoryFilter(null)} selected={categoryFilter} />
+              {categoryList.map(item => <ProjectCategoryItem key={item} item={item} onclick={() => setCategoryFilter(item)} selected={categoryFilter} />)}
             </ul>
           </section>
           <div className="projects__cards">
