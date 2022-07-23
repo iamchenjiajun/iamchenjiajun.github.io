@@ -4,6 +4,8 @@ import { MdContacts, MdHome, MdPerson, MdWork, MdContentPaste } from 'react-icon
 import NavListItem from './NavListItem';
 import NavbarContext from '../../context/NavbarContext';
 
+const NAV_SCROLL_OFFSET = 50;
+
 const navItems = [
   {href: "/#", icon: <MdHome />, target: "head"},
   {href: "/#about", icon: <MdPerson />, target: "about"},
@@ -18,10 +20,14 @@ function Nav() {
 
   let minOffset = 0;
   let minOffsetKey = navItems[0].target;
-  for (const [key, value] of Object.entries(navbarContext)) {
-    if (value.current && scroll >= value.current.offsetTop - 50 && value.current.offsetTop >= minOffset) {
-      minOffset = value.current.offsetTop;
-      minOffsetKey = key;
+  if (scroll && scroll + window.innerHeight >= document.body.scrollHeight - NAV_SCROLL_OFFSET) {
+    minOffsetKey = navItems[navItems.length-1].target;
+  } else {
+    for (const [key, value] of Object.entries(navbarContext)) {
+      if (value.current && scroll >= value.current.offsetTop - NAV_SCROLL_OFFSET && value.current.offsetTop >= minOffset) {
+        minOffset = value.current.offsetTop;
+        minOffsetKey = key;
+      }
     }
   }
 
