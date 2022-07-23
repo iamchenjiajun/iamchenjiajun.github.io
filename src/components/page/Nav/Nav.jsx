@@ -1,16 +1,46 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './nav.css'
 import { MdContacts, MdHome, MdPerson, MdWork, MdContentPaste } from 'react-icons/md'
+import NavListItem from './NavListItem';
+import NavbarContext from '../../context/NavbarContext';
+
+const navItems = [
+  {href: "/#", icon: <MdHome />, target: "head"},
+  {href: "/#about", icon: <MdPerson />, target: "about"},
+  {href: "/#skills", icon: <MdContentPaste />, target: "skills"},
+  {href: "/#projects", icon: <MdWork />, target: "projects"},
+  {href: "/#contact", icon: <MdContacts />, target: "contact"},
+];
 
 function Nav() {
+  const [selection, setSelection] = useState("head");
+  const navbarContext = useContext(NavbarContext);
+
+  useEffect(() => {
+    const scrollEvent = () => {
+      let minOffset = 0;
+      let minOffsetKey = null;
+      for (const [key, value] of Object.entries(navbarContext)) {
+        if (window.scrollY >= value.current.offsetTop - 50 && value.current.offsetTop >= minOffset) {
+          minOffset = value.current.offsetTop;
+          minOffsetKey = key;
+        }
+      }
+      setSelection(minOffsetKey);
+    };
+
+    window.addEventListener('scroll', scrollEvent);
+
+    return () => window.removeEventListener('scroll', scrollEvent);
+  }, [navbarContext])
+  
   return (
     <nav className='container container__nav'>
         <ul className='nav__contents'>
-          <li><a href="/#" className='nav__item'><MdHome /></a></li>
-          <li><a href="/#about" className='nav__item'><MdPerson /></a></li>
-          <li><a href="/#skills" className='nav__item'><MdContentPaste /></a></li>
-          <li><a href="/#projects" className='nav__item'><MdWork /></a></li>
-          <li><a href="/#contact" className='nav__item'><MdContacts /></a></li>
+          {navItems.map(
+            (item, index) => 
+              <NavListItem domId={item.target} key={index} href={item.href} icon={item.icon} selection={selection} />
+          )}
         </ul>
     </nav>
   )
