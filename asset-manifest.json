@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.76141b2d.css",
+    "main.css": "/static/css/main.4f684bbf.css",
     "main.js": "/static/js/main.114a6998.js",
     "static/media/cg3207_proj.jpg": "/static/media/cg3207_proj.17a7974ace9ebef6c32b.jpg",
     "static/media/stardust_conquerors.png": "/static/media/stardust_conquerors.0919f6321ee25d5fba27.png",
     "static/media/terminus.png": "/static/media/terminus.72cdef566426f6cb8b83.png",
     "index.html": "/index.html",
-    "main.76141b2d.css.map": "/static/css/main.76141b2d.css.map",
+    "main.4f684bbf.css.map": "/static/css/main.4f684bbf.css.map",
     "main.114a6998.js.map": "/static/js/main.114a6998.js.map"
   },
   "entrypoints": [
-    "static/css/main.76141b2d.css",
+    "static/css/main.4f684bbf.css",
     "static/js/main.114a6998.js"
   ]
 }
