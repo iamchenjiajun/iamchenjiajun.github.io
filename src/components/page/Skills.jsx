@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavbarRef } from '../context/NavbarContext'
 import './skills.css'
 
 function Skills() {
+    const ref = useNavbarRef("skills");
+
     return (
-        <div className='outer__container' id='skills'>
+        <div className='outer__container' id='skills' ref={ref}>
             <section className='container skills__container'>
                 <h2>my skills</h2>
                 

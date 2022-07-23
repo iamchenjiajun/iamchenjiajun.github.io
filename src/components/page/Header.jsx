@@ -1,10 +1,13 @@
 import React from 'react'
 import './header.css'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { useNavbarRef } from '../context/NavbarContext'
 
 function Header() {
+  const ref = useNavbarRef("head");
+
   return (
-    <div className='header__wrapper'>
+    <div className='header__wrapper' ref={ref}>
       <header className='outer__container header__outer'>
         <div className="container header__container">
           <img className='avatar' src="https://github.com/iamchenjiajun.png" alt="Me" />

@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavbarRef } from '../context/NavbarContext';
 import './about.css'
 
 function About() {
+  const ref = useNavbarRef("about");
+
   return (
-    <div className="container about__container" id='about'>
+    <div className="container about__container" id='about' ref={ref}>
         <article>
             <h2>about me</h2>
             <p>

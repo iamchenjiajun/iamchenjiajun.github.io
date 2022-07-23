@@ -3,11 +3,13 @@ import ProjectCard from './ProjectCard'
 import './projects.css'
 import project_data from '../../data/projects/project_data'
 import { MdClose } from 'react-icons/md'
+import { useNavbarRef } from '../../context/NavbarContext'
 
 function Projects() {
   const [viewMarkup, setViewMarkup] = useState(null);
   const [categoryFilter, setCategoryFilter] = useState(null);
   const [categoryList, setCategoryList] = useState([]);
+  const ref = useNavbarRef("projects");
 
   const openModal = (markup) => {
     setViewMarkup(markup);
@@ -34,7 +36,7 @@ function Projects() {
 
   return (
   <>
-    <div id='projects' className='projects__wrapper'>
+    <div id='projects' className='projects__wrapper' ref={ref}>
       <div className='outer__container projects__outer'>
         <section className='container projects__container'>
           <section className='projects__container-header'>
