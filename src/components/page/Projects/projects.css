@@ -34,7 +34,10 @@
     border: 1px solid var(--accent-color);
     border-left: none;
     padding: 0.3rem 0.6rem;
-    --border-radius: 0.6rem;
+    --border-radius: 0.1rem;
+    transition: var(--transition);
+    min-width: 3rem;
+    text-align: center;
 }
 
 .project__filter-category:first-child {
@@ -44,6 +47,15 @@
 
 .project__filter-category:last-child {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.project__filter-category:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.project__filter-category-selected, .project__filter-category-selected:hover {
+    background: var(--accent-color);
+    color: var(--alt-bg-color);
 }
 
 
