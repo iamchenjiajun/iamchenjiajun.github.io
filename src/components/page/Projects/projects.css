@@ -180,6 +180,10 @@
     max-width: 100%;
 }
 
+.projects__article-content ul {
+    list-style-position: inside;
+}
+
 
 /* animations */
 @keyframes scroll-up {
