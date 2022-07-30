@@ -29,7 +29,11 @@ function Projects() {
   useEffect(
     () => {
       let set = new Set();
-      project_data.forEach(item => set.add(item.category));
+      project_data.forEach(
+        item => item.category.split(" ").forEach(
+          category => set.add(category)
+        )
+      );
       setCategoryList(Array.from(set));
     },
     []
@@ -48,7 +52,7 @@ function Projects() {
             </ul>
           </section>
           <div className="projects__cards">
-            {project_data.filter(project => categoryFilter === null || categoryFilter === project.category).map(
+            {project_data.filter(project => categoryFilter === null || project.category.split(" ").includes(categoryFilter)).map(
               ({title, source, description, demo, img, markup}) =>
                 <ProjectCard
                   key={title}
