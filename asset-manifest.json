@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5d5ef480.css",
-    "main.js": "/static/js/main.6dd2c0c5.js",
+    "main.css": "/static/css/main.53df7559.css",
+    "main.js": "/static/js/main.0307f938.js",
     "static/media/cg3207_proj.jpg": "/static/media/cg3207_proj.d8a368e89b79e39a85fb.jpg",
     "static/media/embedded-video-player.jpeg": "/static/media/embedded-video-player.e31c97edfbb3c04c69bf.jpeg",
     "static/media/ee4218.png": "/static/media/ee4218.60d4c0dff8bd13ec57c1.png",
@@ -10,11 +10,11 @@
     "static/media/stardust_conquerors.png": "/static/media/stardust_conquerors.0919f6321ee25d5fba27.png",
     "static/media/terminus.png": "/static/media/terminus.72cdef566426f6cb8b83.png",
     "index.html": "/index.html",
-    "main.5d5ef480.css.map": "/static/css/main.5d5ef480.css.map",
-    "main.6dd2c0c5.js.map": "/static/js/main.6dd2c0c5.js.map"
+    "main.53df7559.css.map": "/static/css/main.53df7559.css.map",
+    "main.0307f938.js.map": "/static/js/main.0307f938.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d5ef480.css",
-    "static/js/main.6dd2c0c5.js"
+    "static/css/main.53df7559.css",
+    "static/js/main.0307f938.js"
   ]
 }
