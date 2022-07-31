@@ -1,20 +1,11 @@
 import cg3207_img from '../../../assets/cg3207_proj.jpg'
+import ee4218_img from '../../../assets/ee4218.png'
 import terminus_img from '../../../assets/terminus.png'
 import stardust_conquerors_img from '../../../assets/stardust_conquerors.png'
+import embedded_video_player_img from '../../../assets/embedded-video-player.jpeg'
+import cg4002_img from '../../../assets/cg4002.png'
 
 const project_data = [
-	{
-		title: "[EE4218] Neural Network Accelerator on FPGA",
-		description: "This project contains a neural network accelerator implemented on FPGA with Verilog (HDL) and C++ (HLS).",
-		img: cg3207_img,
-		category: "embedded",
-		markup:
-		<>
-			<h2>Neural Network Accelerator on FPGA</h2>
-			<p>category: <em>embedded</em></p>
-			<p>This project contains a neural network accelerator implemented on FPGA with Verilog (HDL) and C++ (HLS).</p>
-		</>,
-	},
 	{
 		title: "[Hack&Roll 2021] Minesweeper Duels",
 		description: "24h hackathon project, 2 player real-time multiplayer built with socket.io and expressJS. Minesweeper Duels is a 2 player game where each player takes turns to reveal a space in the Minesweeper board. However, each player only has a limited amount of time, where it ticks down during your turn. Clicking on a mine deducts additional time.",
@@ -71,6 +62,30 @@ const project_data = [
 		</>,
 	},
 	{
+		title: "Embedded Video Player",
+		description: "A handheld video player that plays a file stored on an SD card. The software is written in bare-metal C, and the hardware consists of a custom printed circuit board.",
+		img: embedded_video_player_img,
+		category: "embedded software",
+		markup:
+		<>
+			<h2>Embedded Video Player</h2>
+			<p>category: <em>embedded systems</em></p>
+
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<summary>
+					<ul>
+						<li>Created a <em>printed circuit board</em> for a video player that plays from a file stored on the SD card.</li>
+						<li>Written with <em>bare-metal C</em> code, including the <em>C driver</em> for the OLED display.</li>
+						<li>A <em>Python script</em> converts videos to a binary format readable by the system using <em>ffmpeg</em>.</li>
+					</ul>
+				</summary>
+			</section>
+
+			<img src={embedded_video_player_img} alt="" />
+		</>,
+	},
+	{
 		title: "[CS2113] termiNus",
 		description: "termiNus is an interactive task manager for undergraduate students in NUS. It is ideal for keyboard-inclined students to showcase their skills and make their life easier with the help of termiNus.",
 		img: terminus_img,
@@ -84,10 +99,12 @@ const project_data = [
 			<section className="project__article-box">
 				<h3>Summary</h3>
 				<small>This is a terminal based program written in Java.</small>
-				<p>termiNus is an interactive task manager for undergraduate students in NUS. It is ideal for keyboard-inclined students to showcase their skills and make their life easier with the help of termiNus.</p>
-				<p>This project was part of the <em>CS2113 Software Engineering & Object-Oriented Programming</em> module.</p>
-				<p>In the module, we learnt OOP principles and how to apply them in a Software Engineering context. My team also had to write extensive user and developer documentation, explaining the technical parts using UML diagrams.</p>
-				<p>Due to the collaborative nature of the project, we also learnt how to use Version Control Systems like Git to facilitate the software development process, using workflows such as fork and pull requests.</p>
+				<ul>
+					<li>termiNus is an <em>interactive task manager</em> for undergraduate students in NUS.</li>
+					<li>In the module, we learnt <em>Object Oriented Programming (OOP) principles</em> and how to apply them in a Software Engineering context.</li>
+					<li>My team also had to write extensive user and developer documentation, explaining the technical parts using UML diagrams.</li>
+					<li>Due to the collaborative nature of the project, we also learnt how to use Version Control Systems like Git to facilitate the software development process, using workflows such as fork and pull requests.</li>
+				</ul>
 			</section>
 			<img src={terminus_img} alt="" />
 			<small>Screenshot of the program.</small>
@@ -109,12 +126,34 @@ const project_data = [
 			<section className="project__article-box">
 				<h3>Summary</h3>
 				<p>A browser game written in HTML5, CSS and JavaScript on the front-end and supported by the Django framework on the backend.</p>
+				<ul>
+					<li>An idle game created to provide a positive distraction when doing repetitive and menial tasks.</li>
+					<li>Built using HTML, CSS and JavaScript with Django framework for the back-end.</li>
+				</ul>
+			</section>
+		</>,
+	},
+	{
+		title: "[Capstone Project] AR Laser Tag",
+		description: "An exciting AR laser tag game.",
+		img: cg4002_img,
+		category: "embedded software",
+		markup:
+		<>
+			<h2>Capstone Project - AR Laser Tag</h2>
+			<p>category: <em>embedded, software</em></p>
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<ul>
+					<li>Engineered the <em>hardware/electronics</em> using hardware sensors and 3D printing and wrote <em>firmware in Arduino/C++</em>.</li>
+					<li>Designed an algorithm in <em>Python</em> to <em>defragment Bluetooth Low Energy (BLE) packets</em> and ensure reliability when data is received from the microcontroller.</li>
+				</ul>
 			</section>
 		</>,
 	},
 	{
 		title: "[CG3207] FPGA Computer",
-		description: "A RISC computer implemented in Verilog on a Xilinx Artix 7 FPGA.",
+		description: "A 32-bit RISC computer at 50 MHz with 5 stage pipeline implemented in Verilog on a Xilinx Artix 7 FPGA.",
 		img: cg3207_img,
 		category: "embedded",
 		markup:
@@ -123,7 +162,32 @@ const project_data = [
 			<p>category: <em>embedded</em></p>
 			<section className="project__article-box">
 				<h3>Summary</h3>
-				<p>A RISC computer implemented in Verilog on a Xilinx Artix 7 FPGA.</p>
+				<ul>
+					<li>A RISC computer implemented in <em>Verilog</em> on a Xilinx Artix 7 FPGA.</li>
+					<li>Contains a <em>5 stage pipeline</em> - Fetch, Decode, Execute, Memory and Writeback.</li>
+					<li>5 stage pipeline allows <em>reducing the critical path</em> and increasing the clock speeds to <em>50 MHz</em>.</li>
+					<li>Assembly instructions are written in another IDE before it is assembled into a ROM that is synthesized as a bitstream.</li>
+				</ul>
+			</section>
+		</>,
+	},
+	{
+		title: "[EE4218] Neural Network Accelerator on FPGA",
+		description: "This project contains a neural network accelerator implemented on an FPGA with C++ and Verilog.",
+		img: ee4218_img,
+		category: "embedded software",
+		markup:
+		<>
+			<h2>Neural Network Accelerator on FPGA</h2>
+			<p>category: <em>embedded software</em></p>
+			<section className="project__article-box">
+				<h3>Summary</h3>
+				<p>This project contains a <em>neural network accelerator</em> implemented on FPGA with C++ and Verilog.</p>
+				<ul>
+					<li>The basic neural network is implemented in <em>C++</em>.</li>
+					<li>A <em>hardware accelerator</em> is created by implementing the functionality in <em>Verilog, then synthesized to a bitstream</em>.</li>
+					<li>The neural network is also written in <em>C++</em>, then synthesized to hardware using <em>High Level Synthesis (HLS)</em>.</li>
+				</ul>
 			</section>
 		</>,
 	},
