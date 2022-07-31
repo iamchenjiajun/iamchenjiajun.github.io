@@ -2,13 +2,14 @@
     display: block;
     padding: 0.6rem;
     margin: 0.5rem 0;
+    color: var(--main-bg-color);
     background: var(--accent-color);
     cursor: pointer;
 }
 
 .contact__form-info {
     opacity: 68%;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .contact__googleform {
