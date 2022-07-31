@@ -15,7 +15,7 @@ function Contact() {
         <p>Otherwise, you can contact me using this contact form. I'll try my best to respond within a few days.</p>
         <div className='contact__form'>
           <button className='contact__form-button' onClick={() => getContactForm(contactFormElem)}>Open contact form</button>
-          <small className='contact__form-info'>Clicking the link above loads an embedded a Google Form in the current page.</small>
+          <small className='contact__form-info'>Clicking the link above loads an embedded Google Form in the current page.</small>
           {contactForm}
         </div>
     </section>
